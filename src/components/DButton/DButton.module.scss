@@ -1,0 +1,67 @@
+.DButton {
+  @apply normal-case min-w-fit h-fit;
+
+  &.color {
+    @apply bg-main-600 text-white hover:bg-main-700;
+  }
+
+  &.gray {
+    @apply bg-gray-7 text-generic-black;
+
+    &:hover {
+      @apply bg-gray-6;
+    }
+  }
+
+  &.gray2 {
+    @apply bg-gray-7 text-gray-3;
+
+    &:hover {
+      @apply bg-gray-6 text-gray-1;
+    }
+  }
+
+  &.outline {
+    @apply bg-generic-white text-generic-black border-gray-5 border-solid border-[1px];
+
+    &:hover {
+      @apply border-gray-4;
+    }
+  }
+
+  &.outline2 {
+    @apply bg-generic-white text-main-600 border-main-600 border-solid border-[1px];
+
+    &:hover {
+      @apply text-main-600 border-main-600;
+    }
+  }
+
+  &.lg {
+    @apply rounded-xl px-[20px] py-[16px];
+    @include body(7);
+  }
+
+  &.md {
+    @apply rounded-lg px-[16px] py-[12px];
+    @include body(2);
+  }
+
+  &.sm {
+    @apply rounded-lg px-[12px] py-[10px];
+    @include body(4);
+  }
+
+  &.xs {
+    @apply rounded-[4px] px-[8px] py-[4px];
+    @include caption(1);
+  }
+
+  &:disabled {
+    @apply bg-gray-6 text-gray-4 border-none;
+
+    &:hover {
+      @apply bg-transparent;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+import { DButtonVariantEnum, DButtonSizeEnum } from './DButton.types.ts';
+import DButton from './index';
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Stories,
+  Story,
+  Unstyled,
+} from '@storybook/addon-docs';
+
+<Meta
+  title="Basic/Button"
+  component={DButton}
+  argTypes={{
+    variant: {
+      options: Object.values(DButtonVariantEnum),
+      defaultValue: { summary: DButtonVariantEnum.primary },
+      control: { type: 'select' },
+      description: '버튼의 색상 및 테두리 스타일 지정',
+    },
+    size: {
+      options: Object.values(DButtonSizeEnum),
+      control: { type: 'select' },
+      defaultValue: { summary: DButtonSizeEnum.lg },
+      description: '버튼의 사이즈를 지정',
+    },
+    disabled: {
+      options: [true, false],
+      control: { type: 'boolean' },
+      defaultValue: false,
+      description: '비활성화 여부',
+    },
+    ref: {
+      if: { truthy: false },
+    },
+    component: {
+      if: { truthy: false },
+    },
+  }}
+/>
+
+export const Template = (args) => <DButton {...args} />;
+
+# Button
+
+#
+
+---
+
+<details>
+  <summary>history</summary>
+  <ul>
+    <li>2023.11.6 홍근호: 생성</li>
+    <li>2023.11.9 홍근호: arg 수정</li>
+    <ul style={{ listStyle: 'circle' }}>
+      <li>description 없는 항목들 추가, Canvas에 disabled 케이스 추가</li>
+      <li>argsTypes 필요없는 항목들 Controls에서 안보이도록 제거</li>
+      <li>args List Unstyled 처리</li>
+    </ul>
+  </ul>
+</details>
+
+<Canvas withSource={'open'}>
+  <Story
+    name="PrimaryLg"
+    args={{ variant: 'primary', size: 'lg', children: 'Primary' }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Controls />
+
+<Canvas>
+  <Story
+    name="SecondaryMd"
+    args={{ variant: 'secondary', size: 'md', children: 'Secondary' }}
+  >
+    {Template.bind({})}
+  </Story>
+
+{' '}
+
+<Story
+  name="TertiarySm"
+  args={{ variant: 'tertiary', size: 'sm', children: 'Tertiary' }}
+>
+  {Template.bind({})}
+</Story>
+
+{' '}
+
+<Story
+  name="QuaternaryXs"
+  args={{ variant: 'quaternary', size: 'xs', children: 'Quaternary' }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="PrimaryLgDisabled"
+  args={{ variant: 'primary', size: 'lg', children: 'Primary', disabled: true }}
+>
+  {Template.bind({})}
+</Story>
+</Canvas>
+
+# args List
+
+## variant
+
+<Unstyled>
+  <div>
+    {Object.keys(DButtonVariantEnum).map((item) => {
+      return (
+        <div style={{ marginTop: '10px' }}>
+          <DButton variant={item}>{item}</DButton>
+        </div>
+      );
+    })}
+  </div>
+</Unstyled>
+
+## size
+
+<Unstyled>
+  <div>
+    {Object.keys(DButtonSizeEnum).map((item) => {
+      return (
+        <div style={{ marginTop: '10px' }}>
+          <DButton size={item}>{item}</DButton>
+        </div>
+      );
+    })}
+  </div>
+</Unstyled>
