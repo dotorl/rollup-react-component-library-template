@@ -1,6 +1,6 @@
 {
   "name": "rollup-start",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",
@@ -40,6 +40,8 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
