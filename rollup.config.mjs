@@ -43,7 +43,7 @@ export default [
             "sass",
             {
               // mixin 사용 시 해당 주석 제거 필요
-              // data: '@import "./src/styles/mixin.scss";',
+              data: '@import "./src/styles/mixin.scss";',
             },
           ],
         ],

@@ -1,0 +1,95 @@
+@mixin header($i) {
+  @if $i == 1 {
+    @apply text-26 leading-[120%] font-extraBold tracking-[0.39px];
+  }
+  @if $i == 2 {
+    @apply text-lg leading-[140%] font-bold tracking-[0.18px];
+  }
+  @if $i == 3 {
+    @apply text-base leading-[140%] font-bold tracking-[0.16px];
+  }
+  @if $i == 4 {
+    @apply text-sm leading-[140%] font-bold tracking-[0.14px];
+  }
+  @if $i == 5 {
+    @apply text-26 leading-[100%] font-bold tracking-[0.39px];
+  }
+}
+
+@mixin body($i) {
+  @if $i == 1 {
+    @apply font-bold text-base leading-[140%] tracking-[0.16px];
+  }
+  @if $i == 2 {
+    @apply font-medium text-base leading-[140%] tracking-[0.16px];
+  }
+  @if $i == 3 {
+    @apply font-regular text-base leading-[140%] tracking-[0.16px];
+  }
+  @if $i == 4 {
+    @apply font-medium text-sm leading-[140%] tracking-[0.14px];
+  }
+  @if $i == 5 {
+    @apply font-regular text-sm leading-[140%] tracking-[0.14px];
+  }
+  @if $i == 6 {
+    @apply font-regular text-xl leading-[140%] tracking-[0.2px];
+  }
+  @if $i == 7 {
+    @apply font-medium text-xl leading-[140%] tracking-[0.2px];
+  }
+  @if $i == 8 {
+    @apply font-bold text-xl leading-[140%] tracking-[0.2px];
+  }
+  @if $i == 9 {
+    @apply font-regular text-xs leading-[140%] tracking-[-0.12px];
+  }
+}
+
+@mixin input($i) {
+  @if $i == 1 {
+    @apply text-base leading-[24px] font-regular tracking-[0.16px];
+  }
+  @if $i == 2 {
+    @apply text-sm leading-[140%] font-regular tracking-[0.14px];
+  }
+  @if $i == 3 {
+    @apply text-xs leading-[140%] font-medium tracking-[0.12px];
+  }
+  @if $i == 4 {
+    @apply text-base leading-[24px] font-semiBold tracking-[0.16px];
+  }
+}
+
+@mixin caption($i) {
+  @if $i == 1 {
+    @apply text-11 leading-[140%] font-medium tracking-[0.11px];
+  }
+  @if $i == 2 {
+    @apply text-11 leading-[140%] font-regular tracking-[0.11px];
+  }
+}
+
+@mixin button($i) {
+  @if $i == 1 {
+    @apply font-regular text-base leading-[24px] tracking-[0.16px];
+  }
+  @if $i == 2 {
+    @apply font-regular text-sm leading-[18px] tracking-[0.14px];
+  }
+  @if $i == 3 {
+    @apply font-regular text-xs leading-[16px] tracking-[0.12px];
+  }
+  @if $i == 4 {
+    @apply font-regular text-11 leading-[16px] tracking-[0.11px];
+  }
+  @if $i == 5 {
+    @apply font-regular text-15 leading-[24px] tracking-[0.16px] underline;
+  }
+  @if $i == 6 {
+    @apply font-regular text-sm leading-[18px] tracking-[0.14px] underline;
+  }
+  @if $i == 7 {
+    @apply font-regular text-xs leading-[16px] tracking-[0.12px] underline;
+  }
+}

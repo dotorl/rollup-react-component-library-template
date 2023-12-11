@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --main-50-color: #fff0eb;
+    --main-75-color: #ffdfd4;
+    --main-100-color: #ffd2c2;
+    --main-200-color: #ffc0a9;
+    --main-300-color: #ffa383;
+    --main-400-color: #ff7948;
+    --main-600-color: #ff6933;
+    --main-700-color: #fa5f34;
+    --main-800-color: #f55534;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --gray-1-color: #323947;
+    --gray-2-color: #565c69;
+    --gray-3-color: #686c7f;
+    --gray-4-color: #a8afbd;
+    --gray-5-color: #d8dce7;
+    --gray-6-color: #eff0f2;
+    --gray-7-color: #f7f7f7;
+    --gray-8-color: #fffdfc;
+    --error-color: #eb5757;
+    --error-35-color: #f8c4c4;
+    --error-15-color: #fce6e6;
+    --success-color: #70bf95;
+    --info-color: #4da2f8;
+    --warning-color: #ffc107;
+    --opacity-50-color: rgba(50, 57, 71, 0.5);
+    --opacity-40-color: #565c69/0.4;
+    --opacity-30-color: #a8afbd/0.3;
+  }
+}
