@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "rimraf dist && rollup -c",
+    "dev": "rollup -c -w",
     "publish:local": "npm run build && npm publish --registry http://localhost:4873"
   },
   "author": "",
